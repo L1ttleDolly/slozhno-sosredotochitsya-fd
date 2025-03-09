@@ -1,5 +1,216 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+  width: 375px;
+  /*height: 100vh;
+  min-height: 668px; */
+  background-image: url(../images/cover-image-light.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--bg-color);
+  position: relative;
+  color: var(--color-element);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: var(--font-family-main);
 }
+
+.header {
+  position: relative;
+ /* block-size: 100vh;*/
+}
+
+/* Общие декоративные стили */
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-color: var(--color-element);
+  z-index: 1;
+}
+
+/* для шапки */
+.header.decorated-zone::before {
+  top: 10px;
+  left: 330px;
+  border-width: 1px 1px 0 0;
+}
+
+.header.decorated-zone::after {
+  top: 633px;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+/* для футера */
+.footer.decorated-zone::before {
+  top: 10px;
+  left: 330px;
+  border-width: 1px 1px 0 0;
+}
+
+.footer.decorated-zone::after {
+  top: 633px;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+/*расположение кнопок*/
+.header__theme-menu  {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding-top: 75px;
+}
+
+/*растановка кнопок*/
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  width: 70px;
+  height: 26px;
+  font-family: var(--font-family-main), sans-serif;
+  color: var(--color-element);
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: 18px;
+}
+
+.header__theme-menu-button:disabled {
+  outline: 1px solid #000;
+}
+
+.header__title {
+  display: block;
+  font-family: var(--font-family-main), sans-serif;
+  font-weight: 700;
+  font-size: 116px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  line-height: 96px;
+  padding: 62px 50px 0 0;
+}
+
+
+/*блок с текстом в шапке*/
+.header__subtitle {
+font-family: var(--font-family-main), sans-serif;
+font-weight: 700;
+font-size: var(--font-size);
+line-height: 23px;
+letter-spacing: 0%;
+background-color: var(--accent-color);
+text-align: start;
+margin: 55px 10px 66px 10px;
+}
+/*заголовки секций*/
+.content__tittle  {
+  font-family: var(--font-family-main), sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size);
+  line-height: 23px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+/*отступы у абзацев*/
+.content__subtitle {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-family-main), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+/*meow meow*/
+.content__link {
+  position: relative;
+text-decoration: none;
+text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.content__link:hover::after{
+  content: "";
+  inset: 0;
+  position: absolute;
+  border-bottom: 1px solid var(--color-element);
+}
+
+
+/*переименовать первая секция 40 отступов*/
+.content__description {
+font-family: var(--font-family-main);
+margin-top: 40px;
+}
+
+/*вохмонжо нужно переименовать*/
+.title-decor {
+  background-color: var(--accent-color);
+  font-size: var(--font-size);
+  margin-top: 20px;
+  }
+
+/*секция 50 отступов*/
+.content__description-focus {
+  font-family: var(--font-family-main);
+  margin-top: 50px;
+}
+
+.visual__content {
+  display: grid;
+  gap: 10px;
+}
+
+.visual__content-decor {
+  background-color: var(--accent-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family-main);
+  margin-top: 50px;
+}
+
+/*посмотреть про жесткую высоту и ширину как правильно здавать в каких значениях*/
+
+.gallery {
+  object-fit: cover; /* Если нужно сохранить пропорции и обрезать лишнее */
+  object-position: center; /* Центрируем изображение */
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.footer {
+  position: relative;
+  /*
+  height: 100vh;*/
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  font-family: var(--font-family-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--title-color);
+  line-height: 96px;
+}
+
