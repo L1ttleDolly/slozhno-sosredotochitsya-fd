@@ -1,13 +1,14 @@
 /*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
+  общие
 */
 :root {
   --bg-color: #fff1f7;
-  --bg-img: url(./images/cover-image-light.png);
+  --bg-img: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
+  --subtitle-color: ;
   --title-color: #ffc2e6;
   --font-family-main: IBM Plex Mono;
   --color-element: #353430;
-  --font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);/*пересмотреть формулу*/
+  --font-size: 18px;
+  --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*116px*/
 }

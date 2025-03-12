@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -25,6 +25,7 @@
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_light"
+              aria-pressed="false"
             >
               День
             </button>
@@ -32,7 +33,7 @@
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
+              aria-pressed="true" disabled
             >
               Авто
             </button>
@@ -40,6 +41,7 @@
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_dark"
+              aria-pressed="false"
             >
               Неон
             </button>
@@ -57,22 +59,25 @@
     </header>
     <main>
       <section class="content__description">
-        <h2 class="content__tittle">Почему сосредоточиться так сложно</h2>
-        <ul>
+        <h2 class="content__title">Почему сосредоточиться так сложно</h2>
+        <ul class="content__list-item">
           <li>
             <h3 class="title-decor">Многозадачность</h3>
             <p class="content__subtitle">
               Особенно сложно сосредоточиться, когда задач много и все они —
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
-              её просто не существует. Исследователи <a
-              href="https://www.youtube.com/watch?v=hvL1339luv0&ab_channel=RapidLiquid/"
-              target="_blank"
-              class="content__link">выяснили</a>, что мозгу тяжело
-              концентрироваться даже на двух делах одновременно. А когда в поле
-              внимания попадает несколько важных задач, организм паникует и
-              выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
-              работаем невнимательно: ошибаемся и быстро устаём.
+              её просто не существует. Исследователи
+              <a
+                href="https://www.youtube.com/watch?v=hvL1339luv0&ab_channel=RapidLiquid/"
+                target="_blank"
+                class="content__link"
+                >выяснили</a
+              >, что мозгу тяжело концентрироваться даже на двух делах
+              одновременно. А когда в поле внимания попадает несколько важных
+              задач, организм паникует и выделяет кортизол и адреналин —
+              «гормоны стресса». Из-за этого мы работаем невнимательно:
+              ошибаемся и быстро устаём.
             </p>
           </li>
           <li>
@@ -90,9 +95,9 @@
           </li>
         </ul>
       </section>
-      <section class="content__description-focus">
-        <h2 class="content__tittle">Что снижает концентрацию внимания?</h2>
-        <ul>
+      <section class="content__description__concentration">
+        <h2 class="content__title">Что снижает концентрацию внимания?</h2>
+        <ul class="content__list-item">
           <li>
             <h3 class="title-decor">Многозадачность</h3>
             <p class="content__subtitle">
@@ -129,14 +134,16 @@
           </li>
         </ul>
       </section>
-      <section class="content__description-focus">
-        <h2 class="content__tittle">
+     <section class="content__description__focus">
+        <h2 class="content__title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        <ul>
+        <ul class="content__list-item">
           <li>
-            <h3 class="title-decor">5 простых (на самом деле не очень) советов</h3>
+            <h3 class="title-decor">
+              5 простых (на самом деле не очень) советов
+            </h3>
             <h4 class="title-decor">Представьте небо и облака</h4>
             <p class="content__subtitle">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
