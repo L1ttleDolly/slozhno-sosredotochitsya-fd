@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     margin-block-end: 60px;
-    max-inline-size: 1024px;
-    min-block-size: 768px;
+    max-inline-size: 768px;
+    min-block-size: 1024px;
   }
 
   .header__theme-menu {
@@ -49,8 +49,7 @@
 
   /*the first a section*/
   .content__description {
-    margin-block-start: 60px;
-    padding-block-start: 120px;
+    padding-block-start: 0;
     padding-inline-end: 20px;
     display: grid;
     grid-template-columns: 276px 1fr; /*заголовок*/
@@ -132,8 +131,8 @@
   }
 
   .footer {
-    max-inline-size: 1024px;
-    min-block-size: 768px;
+    max-inline-size: 768px;
+    min-block-size: 1024px;
     margin: 0;
   }
 }
