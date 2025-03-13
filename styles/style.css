@@ -1,8 +1,5 @@
 .page {
-  max-inline-size: 375px;
-  height: 100vh;
-  margin-top: 40px;
-  min-block-size: 668px;
+  font-family: var(--font-family-main), sans-serif;
   background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-position: center;
@@ -10,13 +7,16 @@
   background-size: cover;
   background-color: var(--bg-color);
   position: relative;
-  font-family: var(--font-family-main), sans-serif;
 }
 
 .header {
+  margin-top: 40px;
   position: relative;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
+  max-inline-size: 375px;
+  min-block-size: 668px;
+  height: 100vh;
 }
 
 /* Общие декоративные стили */
@@ -85,7 +85,7 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  padding-block-start: 75px;
+  padding-block-start: 70px;
 }
 
 /*растановка кнопок*/
@@ -110,7 +110,6 @@
   color: var(--color-element);
   font-weight: 400;
   font-size: var(--font-size);
-  line-height: 18px;
 }
 
 .header__theme-menu-button:disabled {
@@ -136,7 +135,7 @@
   line-height: 23.4px;
   background-color: var(--accent-color);
   text-align: start;
-  margin: 55px 0 66px 0;
+  margin: 59px 0 66px 0;
 }
 
 main {
