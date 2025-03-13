@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     margin-block-end: 60px;
+    max-inline-size: 1024px;
+    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -130,7 +132,9 @@
   }
 
   .footer {
-    min-block-size: 1024px;
+    max-inline-size: 1024px;
+    min-block-size: 768px;
+    margin: 0;
   }
 }
 
@@ -145,7 +149,7 @@
     display: flex; /*флекс чтоб использовать меньше марджинов для последнего элемента*/
     flex-direction: column;
     align-items: flex-start;
-    margin-block-end: ;
+    margin-block-end: 0;
   }
   /*расположение кнопок*/
   .header__theme-menu {
@@ -202,7 +206,7 @@
   /*the first a section*/
   .content__description {
     margin-block-start: 0;
-    padding-block-start: 70px;
+    padding-block-start: 60px;
     padding-inline-end: 0;
     display: grid;
     grid-template-columns: 315px 1fr; /*заголовок*/
