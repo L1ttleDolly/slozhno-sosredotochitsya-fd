@@ -1,8 +1,6 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   max-inline-size: 375px;
-  /* height: 100vh; */
+  height: 100vh;
   margin-top: 40px;
   min-block-size: 668px;
   background-image: var(--bg-img);
@@ -208,7 +206,7 @@ main {
 }
 
 .visual__content-decor {
-  background-color: ;
+  background-color: var(--accent-color);
   font-size: var(--font-size);
   font-family: var(--font-family-main), sans-serif;
   margin-block-start: 50px;
@@ -225,7 +223,7 @@ main {
 .footer {
   position: relative;
   min-block-size: 668px;
-  /*height: 100vh;*/
+  height: 100vh;
   margin-top: 40px;
   display: flex;
   justify-content: center;
