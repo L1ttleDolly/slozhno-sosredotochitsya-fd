@@ -1,14 +1,13 @@
-
 :root.theme-light {
-  --accent-color: #ff8dcb;
+  --bg-img: (./images/cover-image-light.png);
+  --content-subtitle-color: #353430; /*text*/
+  --content-title-color: #353430; /*contents color from accent*/
+  --accent-color: #ff8dcb; /*shadow+decor for neon*/
+  --color-element: #353430;
   --title-color: #ffc2e6;
   --bg-color: #fff1f7;
-  --color-element: #353430;
-  --bg-img: (./images/cover-image-light.png);
-  --content-subtitle-color: #353430;
-  --content-title-color: #FF0070
+  --decorated-element-display: none;
 }
 
 .theme-light .page {
-
 }

@@ -1,14 +1,13 @@
-/*
-  общие
-*/
 :root {
-  --bg-color: #fff1f7;
   --bg-img: url(../images/cover-image-light.png);
-  --accent-color: #ff8dcb;
-  --subtitle-color: ;
-  --title-color: #ffc2e6;
   --font-family-main: IBM Plex Mono;
-  --color-element: #353430;
   --font-size: 18px;
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*116px*/
+  --content-subtitle-color: #353430; /*text*/
+  --content-title-color: #353430; /*contents color from accent*/
+  --accent-color: #ff8dcb; /*shadow+decor for neon*/
+  --color-element: #353430;
+  --title-color: #ffc2e6;
+  --bg-color: #fff1f7;
+  --decorated-element-display: none;
 }
