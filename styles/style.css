@@ -123,7 +123,7 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
   line-height: 96px;
-  padding: 62px 50px 0 0;
+  padding: 70px 50px 0 0;
 }
 
 /*блок с текстом в шапке*/
@@ -134,8 +134,8 @@
   line-height: 23.4px;
   background-color: var(--accent-color);
   text-align: start;
-  margin: 60px 0 66px 0;
-  color: var(--bg-color: );
+  margin: 55px 0 66px 0;
+  color: var(--bg-color);
 }
 
 main {
@@ -211,6 +211,7 @@ main {
 .visual__content {
   display: grid;
   gap: 10px;
+  margin-bottom: 40px;
 }
 
 .visual__content-decor {

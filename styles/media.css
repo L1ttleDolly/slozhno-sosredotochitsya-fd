@@ -183,12 +183,14 @@
   /*the second a section*/
   .content__description__concentration {
     margin-block-start: 40px;
+
   }
 
   .content__description__concentration .content__list-item {
     grid-template-columns: repeat(3, minmax(300px, 400px));
     gap: 20px;
     margin-block-end: 10px;
+    display: grid;
   }
 
   .content__description__concentration .content__subtitle {
