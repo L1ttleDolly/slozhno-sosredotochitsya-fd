@@ -5,6 +5,8 @@
   --accent-color: #ff8dcb; /*shadow+decor for neon*/
   --color-element: #353430;
   --title-color: #ffc2e6;
-  --bg-color: #fff1f7;
+  --bg-color: #fff1f7; /*subtitle color text*/
   --decorated-element-display: none;
+  --color-actions: rgba(50, 49, 45, 0.4); /*hover*/
+  --color-actions-link:#353430;
 }

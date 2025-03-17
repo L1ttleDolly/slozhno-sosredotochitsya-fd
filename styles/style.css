@@ -1,19 +1,18 @@
 .page {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-color: var(--bg-color);
-  position: relative;
+  margin: 0 auto;
 }
 
 .header {
   position: relative;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
-  max-inline-size: 375px;
   min-block-size: 668px;
   height: 100vh;
 }
@@ -30,30 +29,20 @@
   z-index: 1;
 }
 
-/* для шапки */
-.header.decorated-zone::before {
-  inset: 10px 0 0 340px;
+.decorated-zone::before {
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
   border-width: 1px 1px 0 0;
 }
 
-.header.decorated-zone::after {
-  inset: 633px 0 0 10px;
-  border-width: 0 0 1px 1px;
-}
-
-/* для футера */
-.footer.decorated-zone::before {
-  inset: 10px 0 0 340px;
-  border-width: 1px 1px 0 0;
-}
-
-.footer.decorated-zone::after {
-  inset: 632px 0 0 10px;
+.decorated-zone::after {
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   border-width: 0 0 1px 1px;
 }
 
 .decorated-element {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 25px;
@@ -88,13 +77,12 @@
 }
 
 /*растановка кнопок*/
-
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: end;
-  gap: 12px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -105,19 +93,31 @@
   text-transform: lowercase;
   inline-size: 70px;
   block-size: 26px;
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   color: var(--color-element);
   font-weight: 400;
   font-size: var(--font-size);
 }
 
+/*разобарться с размером рамки*/
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--color-actions); /*сделать переменную для цвета*/
+}
+
 .header__theme-menu-button:disabled {
-  outline: 1px solid;
+  outline: 1px solid var(--color-element);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+.header__theme-menu-button:focus-visible {
+  outline: 1px solid var(--color-element);
 }
 
 .header__title {
   display: block;
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 700;
   font-size: var(--font-size-title);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -128,13 +128,14 @@
 
 /*блок с текстом в шапке*/
 .header__subtitle {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 23.4px;
   background-color: var(--accent-color);
   text-align: start;
-  margin: 59px 0 66px 0;
+  margin: 60px 0 66px 0;
+  color: var(--bg-color: );
 }
 
 main {
@@ -144,12 +145,12 @@ main {
 
 /*секция 40 отступов*/
 .content__description {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   padding-block-start: 40px;
 }
 
 .content__title {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 700;
   font-size: var(--font-size);
   color: var(--content-title-color);
@@ -162,7 +163,7 @@ main {
 .content__subtitle {
   display: inline-block;
   margin-block-start: 10px;
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 400;
   color: var(--content-subtitle-color);
   font-size: var(--font-size);
@@ -180,6 +181,15 @@ main {
   inset: 0;
   position: absolute;
   border-bottom: 1px solid;
+}
+
+.content__link:focus {
+  outline: none;
+  border-bottom: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--color-actions-link);
 }
 
 /*20px*/
@@ -206,7 +216,7 @@ main {
 .visual__content-decor {
   background-color: var(--accent-color);
   font-size: var(--font-size);
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   margin-block-start: 50px;
 }
 
@@ -222,14 +232,13 @@ main {
   position: relative;
   min-block-size: 668px;
   height: 100vh;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer__title {
-  font-family: var(--font-family-main), sans-serif;
+  font-family: var(--font-family-main), monospace;
   font-weight: 700;
   font-size: var(--font-size-title);
   text-shadow: 4px 4px 0 var(--accent-color);

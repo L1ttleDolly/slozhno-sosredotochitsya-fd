@@ -1,50 +1,41 @@
 @media (min-width: 768px) {
-  .page {
-    max-inline-size: 768px;
-    min-block-size: 1024px;
-    padding: 0;
-    margin: 0;
-  }
-
   .header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
     margin-block-end: 60px;
-    max-inline-size: 768px;
+    min-inline-size: 768px;
     min-block-size: 1024px;
+    padding-inline-start: 0;
+    padding-inline-end: 20px;
   }
 
   .header__theme-menu {
-    padding-block-start: 192px;
-    padding-inline-end: 10px;
+    padding-block-start: 12px;
   }
 
   .header__title {
-    padding-block-start: 173px;
+    justify-self: start;
+    align-self: start;
+    padding: 0;
   }
 
   .header__subtitle {
     max-inline-size: 364px;
-    max-block-size: 117px;
-    margin-block-start: 162px;
-    margin-inline-end: 10px;
-    align-self: flex-end;
-  }
-  /*декоратив*/
-  .header.decorated-zone::before {
-    inset: 20px 0 0 723px;
+    justify-self: end;
+    align-self: center;
   }
 
-  .header.decorated-zone::after {
-    inset: 979px 0 0 20px;
+  /*декоратив доделать*/
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+    border-width: 1px 1px 0 0;
   }
 
-  .footer.decorated-zone::before {
-    inset: 20px 0 0 723px;
-  }
-
-  .footer.decorated-zone::after {
-    inset: 979px 0 0 30px;
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+    border-width: 0 0 1px 1px;
   }
 
   /*the first a section*/
@@ -57,7 +48,6 @@
 
   main {
     padding: 0;
-    margin: 0;
   }
   /*general*/
 
@@ -112,6 +102,7 @@
   .visual__content-decor {
     grid-column: span 3;
     grid-row: 1;
+    margin-block-start: 60px;
   }
   /*sunset*/
   .gallery:nth-child(2) {
@@ -131,69 +122,39 @@
   }
 
   .footer {
-    max-inline-size: 768px;
     min-block-size: 1024px;
-    margin: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .page {
-    padding: 0;
-    margin: 0;
-    max-inline-size: 1024px;
-    min-block-size: 768px;
-  }
   .header {
-    display: flex; /*флекс чтоб использовать меньше марджинов для последнего элемента*/
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-block-end: 0;
-    max-inline-size: 1024px;
     min-block-size: 768px;
   }
   /*расположение кнопок*/
   .header__theme-menu {
     align-self: center;
     padding-top: 20px;
-    padding-bottom: 0;
+    padding-left: 20px;
   }
   /*растановка кнопок*/
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
   }
   .header__title {
     padding-top: 289px;
-    font-size: 157px;
+    font-size: var(--font-size-title-desk);
   }
 
   .header__subtitle {
-    max-inline-size: 491px;
-    max-block-size: 71px;
+    min-inline-size: 491px;
     margin-top: 130px;
     padding: 0;
     align-self: flex-end;
-  }
-
-  /*декоратив*/
-  .header.decorated-zone::before {
-    inset: 20px 0 0 979px;
-  }
-
-  .header.decorated-zone::after {
-    inset: 723px 0 0 20px;
-  }
-
-  .footer.decorated-zone::before {
-    inset: 20px 0 0 979px;
-  }
-
-  .footer.decorated-zone::after {
-    inset: 723px 0 0 20px;
   }
 
   .decorated-element {
@@ -202,12 +163,9 @@
 
   /*the first a section*/
   .content__description {
-    margin-block-start: 0;
     padding-block-start: 60px;
     padding-inline-end: 0;
-    display: grid;
     grid-template-columns: 315px 1fr; /*заголовок*/
-
   }
   .content__description .content__list-item {
     padding-inline-start: 40px;
@@ -228,7 +186,6 @@
   }
 
   .content__description__concentration .content__list-item {
-    display: grid;
     grid-template-columns: repeat(3, minmax(300px, 400px));
     gap: 20px;
     margin-block-end: 10px;
@@ -236,11 +193,9 @@
 
   .content__description__concentration .content__subtitle {
     padding-block-end: 0;
-    max-block-size: 413px;
   }
   /*last a section*/
   .content__description__focus {
-    display: grid;
     grid-template-columns: 315px 1fr;
     padding-inline-start: 20px;
     margin-block-start: 80px;
@@ -251,20 +206,12 @@
   .content__description__focus .content__title {
     padding-inline-start: 0;
   }
-  .content__description__focus h3 {
-    margin-block-end: 20px;
-  }
-
-  .visual__content-decor {
-    margin-block-start: 60px;
-  }
 
   .footer {
-    max-inline-size: 1024px;
     min-block-size: 768px;
   }
 
   .footer__title {
-    font-size: 157px;
+    font-size: var(--font-size-title-desk);
   }
 }

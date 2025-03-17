@@ -3,11 +3,14 @@
   --font-family-main: IBM Plex Mono;
   --font-size: 18px;
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*116px*/
+  --font-size-title-desk: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --content-subtitle-color: #353430; /*text*/
   --content-title-color: #353430; /*contents color from accent*/
   --accent-color: #ff8dcb; /*shadow+decor for neon*/
   --color-element: #353430;
   --title-color: #ffc2e6;
-  --bg-color: #fff1f7;
+  --bg-color: #fff1f7; /*subtitle color text*/
   --decorated-element-display: none;
+  --color-actions: rgba(50, 49, 45, 0.4); /*hover*/
+  --color-actions-link:#353430;
 }
