@@ -197,11 +197,16 @@ main {
   background-color: var(--accent-color);
   font-size: var(--font-size);
   margin-block-start: 20px;
+  color: var(--color-decor-title);
 }
 
 /*секция 50 отступов*/
 .content__description__focus {
   margin-block-start: 50px;
+}
+
+.content__description__focus h4 {
+font-weight: 400;
 }
 
 .content__description__concentration .content__title {
@@ -219,6 +224,7 @@ main {
   font-size: var(--font-size);
   font-family: var(--font-family-main), monospace;
   margin-block-start: 50px;
+  color: var(--color-decor-title);
 }
 
 .gallery {
