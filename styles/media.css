@@ -1,7 +1,5 @@
 @media (min-width: 768px) {
   .header {
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
     margin-block-end: 60px;
     min-inline-size: 768px;
     min-block-size: 1024px;
@@ -29,13 +27,11 @@
   .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
-    border-width: 1px 1px 0 0;
   }
 
   .decorated-zone::after {
     inset-block-end: 20px;
     inset-inline-start: 20px;
-    border-width: 0 0 1px 1px;
   }
 
   /*the first a section*/
@@ -58,7 +54,6 @@
   .content__title {
     padding-inline-start: 20px;
     inline-size: 236px;
-    text-align: start;
   }
 
   .title-decor {
@@ -121,9 +116,6 @@
     grid-column: span 2;
   }
 
-  .footer {
-    min-block-size: 1024px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -137,7 +129,6 @@
   /*расположение кнопок*/
   .header__theme-menu {
     align-self: center;
-    padding-top: 20px;
     padding-left: 20px;
   }
   /*растановка кнопок*/
@@ -207,10 +198,6 @@
   }
   .content__description__focus .content__title {
     padding-inline-start: 0;
-  }
-
-  .footer {
-    min-block-size: 768px;
   }
 
   .footer__title {
