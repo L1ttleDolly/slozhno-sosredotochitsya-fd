@@ -7,10 +7,6 @@
     padding-inline-end: 20px;
   }
 
-  .header__theme-menu {
-    padding-block-start: 12px;
-  }
-
   .header__title {
     justify-self: start;
     align-self: start;
@@ -21,6 +17,11 @@
     max-inline-size: 364px;
     justify-self: end;
     align-self: center;
+  }
+
+  .decorated-element {
+    inset-block-start: 20px;
+    inset-inline-end: 30px;
   }
 
   /*декоратив доделать*/
@@ -120,16 +121,16 @@
 
 @media (min-width: 1024px) {
   .header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-block-end: 0;
     min-block-size: 768px;
+    margin-block-end: 0;
   }
   /*расположение кнопок*/
   .header__theme-menu {
-    align-self: center;
-    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    padding-top: 20px;
   }
   /*растановка кнопок*/
   .header__theme-menu-list {
@@ -137,19 +138,13 @@
     flex-direction: row;
   }
   .header__title {
-    padding-top: 289px;
     font-size: var(--font-size-title-desk);
   }
 
   .header__subtitle {
     min-inline-size: 491px;
-    margin-top: 130px;
-    padding: 0;
-    align-self: flex-end;
-  }
-
-  .decorated-element {
-    margin-inline-end: 0;
+    align-self: center;
+    margin: 0;
   }
 
   /*the first a section*/
@@ -178,7 +173,7 @@
   }
 
   .content__description__concentration .content__list-item {
-    grid-template-columns: repeat(3, minmax(300px, 400px));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-block-end: 10px;
     display: grid;

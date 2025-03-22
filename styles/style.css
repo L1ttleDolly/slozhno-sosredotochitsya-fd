@@ -55,9 +55,8 @@
   display: var(--decorated-element-display);
   align-items: center;
   gap: 10px;
-  margin-right: 10px;
-  inset-block-start: 2.6vw;
-  inset-inline-end: 2.6vw;
+  inset-block-start: 10px;
+  inset-inline-end: 20px;
 }
 
 .decorated-element::after {
@@ -75,7 +74,7 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 /*растановка кнопок*/
@@ -85,6 +84,10 @@
   justify-content: end;
   align-items: end;
   gap: 10px;
+}
+
+.header__theme-menu-item {
+  align-self: center;
 }
 
 .header__theme-menu-button {
@@ -113,7 +116,7 @@
   outline: none;
 }
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--color-element);
+  border-bottom: 1px solid var(--color-actions);
 }
 
 .header__title {
@@ -205,7 +208,7 @@ main {
 
 /*секция 50 отступов*/
 .content__description__focus {
-  margin-block-start: 50px;
+  margin-block-start: 53px;
 }
 
 .content__description__focus h4 {
